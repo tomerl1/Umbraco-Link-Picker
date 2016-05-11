@@ -149,4 +149,10 @@ angular.module("umbraco").controller("Gibe.Dialogs.LinkPickerController",
 	        $scope.dialogTreeEventHandler.unbind("treeNodeSelect", nodeSelectHandler);
 	        $scope.dialogTreeEventHandler.unbind("treeNodeExpanded", nodeExpandedHandler);
 	    });
+        
+        $scope.inputUrlChanged = function () {
+            if ($scope.target.id) {
+                $scope.target.id = 0;
+            }
+        };
 	});
